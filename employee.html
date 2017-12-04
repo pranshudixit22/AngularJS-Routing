@@ -1,0 +1,36 @@
+﻿<!Doctype html>
+<html lang="en-US"  data-ng-app="myApp"> 
+<head>
+	<title>Employee Project - Chintan</title>
+	<link rel="stylesheet" type="text/css" href="employee.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+</head>
+<body data-ng-controller="emp-data">
+
+	<header class="header">
+		<a href="#!home" class="btn btn-primary btn-lg">Home</a>
+		<a href="#!emp-data" class="btn btn-primary btn-lg">Employee List</a>
+				
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#!signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			<li><a href="#!login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		</ul>
+
+	</header>
+
+	<div data-ng-view></div>
+	
+	<footer class="footer">&copy; 2017 Copyright - Chintan Patel - All Rights Reserved !!</footer>
+
+	<script type="text/javascript" src="employee.js"></script>
+
+</body>
+</html>

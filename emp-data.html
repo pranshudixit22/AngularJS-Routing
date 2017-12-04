@@ -1,0 +1,32 @@
+<div class="data">
+	<br />
+
+	<input type="text" data-ng-model="prompt" placeholder="Please enter keywords to search !!" />
+
+	<a href="#!emp-change" class="btn btn-success">Add a new Employee</a>
+
+	<br />
+	<br />
+
+	<table class="table-hover table-bordered">
+		<tr>
+			<th ng-click="orderByField='id'; reverseSort = !reverseSort"><button>ID</button><i class="fa fa-fw fa-sort"></i></th>
+			<th ng-click="orderByField='gender'; reverseSort = !reverseSort"><button>Gender</button><i class="fa fa-fw fa-sort"></i></th>
+			<th ng-click="orderByField='name'; reverseSort = !reverseSort"><button>Name</button><i class="fa fa-fw fa-sort"></i></th>
+			<th ng-click="orderByField='email'; reverseSort = !reverseSort"><button>Email</button><i class="fa fa-fw fa-sort"></i></th>
+			<th ng-click="orderByField='city'; reverseSort = !reverseSort"><button>City</button><i class="fa fa-fw fa-sort"></i></th>
+			<th>Edit</th>
+			<th>Remove</th>
+		</tr>
+		<tr data-ng-class="{Male: result.gender == 'M' , Female: result.gender == 'F'}" data-ng-repeat="result in myData | filter : prompt | orderBy:orderByField:reverseSort">
+			<td>{{result.id}}</td>
+			<td>{{result.gender}}</td>
+			<td>{{result.name}}</td>
+			<td>{{result.email}}</td>
+			<td>{{result.city}}</td>
+			<td><button type="button" class="btn btn-default" data-ng-click="edit($index)"><i class="glyphicon glyphicon-pencil"></i></button></td>
+			<td><button type="button" class="btn btn-danger" data-ng-click="deleteItem($index)"><i class="glyphicon glyphicon-trash"></i></button></td>
+		</tr>
+	</table>
+
+</div>
